@@ -6,8 +6,8 @@ import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import Dashboard from './Pages/Dashboard';
-import Order from './Pages/Order';
 import Course from './Pages/Course';
+import Booking from './Pages/Booking';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +29,11 @@ export default function App() {
           name="Login"
           component={Login}
           options={{ title: 'Login' }}
+        />
+        <Stack.Screen
+          name="Booking"
+          component={Booking}
+          options={{ title: 'Booking' }}
         />
         <Stack.Screen
           name="Signup"

@@ -9,7 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from "axios";
 
 
-export default function Course({ navigation, route }) {
+export default function Booking({ navigation, route }) {
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [courseid, setCourseid] = useState(route.params.courseid);
@@ -101,63 +101,26 @@ export default function Course({ navigation, route }) {
                         </View>
                     </View>
 
-                    <Text style={{ fontSize: 20, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'red' }}>
-                        Courses Image
-                    </Text>
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <ImageBackground
-                            source={require('../img/12.jpg')}
-                            style={{ width: width * 0.9, height: height * 0.6, marginTop: 20, marginBottom: 20 }}
-                        >
-                        </ImageBackground>
+                    <Text style={{ fontSize: 25, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white', marginBottom: 20 }}>Course Enrollment</Text>
 
-                    </View>
-                    <Text style={{ fontSize: 25, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Overview</Text>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Course Name:
-                        </Text>
-                        <Text style={{ color: 'white', marginTop: 21, }}> {coursedata?.name}</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Instructor's Name:
-                        </Text>
-                        <Text style={{ color: 'white', marginTop: 21, }}> {coursedata?.instructor}</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Description: 
-                         </Text>
-                        <Text style={{ color: 'white', marginTop: 21, width:'70%', textAlign:'justify' }}>{coursedata?.description}</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Enrollment Status:
-                        </Text>
-                        <Text style={{ color: 'white', marginTop: 21, }}> {coursedata?.enrollmentStatus}</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Course Duration:
-                        </Text>
-                        <Text style={{ color: 'white', marginTop: 21, }}> {coursedata?.duration}</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Location:
-                        </Text>
-                        <Text style={{ color: 'white', marginTop: 21, }}> {coursedata?.location}</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Pre-requisites:
-                        </Text>
-                        <Text style={{ color: 'white', marginTop: 21, width:'60%' }}> {coursedata?.prerequisites}</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white', marginBottom:20 }}>Syllabus:
-                        </Text>
-                        <Text style={{ color: 'white', marginTop: 21, }}> {coursedata?.syllabus[0].topic}</Text>
-                    </View>
+                    <TextInput style={{
+                        backgroundColor: '#525252', color: 'white', width: '90%', alignSelf: 'center',
+                        padding: 5, borderRadius: 6, height: 40, marginBottom: 30
+                    }} placeholder={'Enter your name'} placeholderTextColor="white" />
+                    <TextInput style={{
+                        backgroundColor: '#525252', color: 'white', width: '90%', alignSelf: 'center',
+                        padding: 5, borderRadius: 6, height: 40, marginBottom: 30
+                    }} placeholder={'Enter your email'} placeholderTextColor="white" />
 
-                    <TouchableOpacity onPress={()=>navigation.navigate('Booking', { 'courseid': courseid })} style={{backgroundColor:'orange', marginBottom:20, width:'90%', height:30, borderRadius:6, alignSelf:'center', alignItems:'center'}}>
-                        <Text style={{color:'white', fontWeight:'bold', padding:5}}>Continue to Enroll</Text>
+                    <TextInput style={{
+                        backgroundColor: '#525252', color: 'white', width: '90%', alignSelf: 'center',
+                        padding: 5, borderRadius: 6, height: 40, marginBottom: 30
+                    }} placeholder={'Enter your phone'} placeholderTextColor="white" />
+
+                    <TouchableOpacity onPress={() => {navigation.navigate('Dashboard'), alert('Congratulations! Successfully Enrolled')}}
+                     style={{ backgroundColor: 'orange', marginBottom: 20, width: '90%', height: 30, borderRadius: 6, alignSelf: 'center', alignItems: 'center' }}>
+                        <Text style={{ color: 'white', fontWeight: 'bold', padding: 5 }}>Submit</Text>
                     </TouchableOpacity>
-
 
 
 

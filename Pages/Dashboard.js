@@ -22,10 +22,10 @@ export default function Dashboard({ navigation }) {
 
 
     useEffect(() => {
-        onRegister();
+        onCourseList();
     }, [])
 
-    const onRegister = async () => {
+    const onCourseList = async () => {
         try {
             const { data } = await axios({
                 method: 'get',
@@ -35,7 +35,7 @@ export default function Dashboard({ navigation }) {
                     'Content-Type': 'application/json',
                 },
             });
-            //console.log(data);
+            console.log(data);
             setCoursedata(data)
             //alert(data.message)
 
@@ -93,10 +93,11 @@ export default function Dashboard({ navigation }) {
                     </View>
                     <Text style={{ fontSize: 25, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Available Courses</Text>
 
-                    {coursedata.map(function (course) {
+                            {coursedata ==undefined || coursedata == null || coursedata ==''? '' :
+                    (coursedata?.map(function (course) {
                         return (
                             <View key={course.id}>
-                                <TouchableOpacity onPress={() => navigation.navigate('Course', { 'couseid': course.id })} >
+                                <TouchableOpacity onPress={() => navigation.navigate('Course', { 'courseid': course.id })} >
                                     <ImageBackground
                                         source={require('../img/12.jpg')}
                                         style={{ width: width * 0.9, height: height * 0.6, marginTop: 20, marginLeft: 15, marginBottom: 20 }}
@@ -111,7 +112,8 @@ export default function Dashboard({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                         )
-                    })}
+                    }))
+                }
 
                 </ScrollView>
             </LinearGradient >
