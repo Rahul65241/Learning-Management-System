@@ -9,7 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from "axios";
 
 
-export default function Course({ navigation, route }) {
+export default function UserCourse({ navigation, route }) {
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [courseid, setCourseid] = useState(route.params.courseid);
@@ -47,21 +47,6 @@ export default function Course({ navigation, route }) {
             }
 
         }
-    }
-
-    var message;
-    var status = 0;
-    if (coursedata?.enrollmentStatus == "Close") {
-        message = "Enrollment is Closed Now";
-        status = 1;
-    }
-    if (coursedata?.enrolled == true) {
-        message = "You are already enrolled";
-        status = 1;
-    }
-    if (coursedata?.enrollmentStatus == "Close" && coursedata?.enrolled == true) {
-        message = "Enrollment is Closed Now && You are already enrolled";
-        status = 1;
     }
 
 
@@ -139,9 +124,9 @@ export default function Course({ navigation, route }) {
                         <Text style={{ color: 'white', marginTop: 21, }}> {coursedata?.instructor}</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Description:
-                        </Text>
-                        <Text style={{ color: 'white', marginTop: 21, width: '70%', textAlign: 'justify' }}>{coursedata?.description}</Text>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Description: 
+                         </Text>
+                        <Text style={{ color: 'white', marginTop: 21, width:'70%', textAlign:'justify' }}>{coursedata?.description}</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Enrollment Status:
@@ -161,22 +146,23 @@ export default function Course({ navigation, route }) {
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white' }}>Pre-requisites:
                         </Text>
-                        <Text style={{ color: 'white', marginTop: 21, width: '60%' }}> {coursedata?.prerequisites}</Text>
+                        <Text style={{ color: 'white', marginTop: 21, width:'60%' }}> {coursedata?.prerequisites}</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white', marginBottom: 20 }}>Syllabus:
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white', marginBottom:20 }}>Syllabus:
                         </Text>
                         <Text style={{ color: 'white', marginTop: 21, }}> {coursedata?.syllabus[0].topic}</Text>
                     </View>
-
-                    {status == 0 ?
-                        <TouchableOpacity onPress={() => navigation.navigate('Booking', { 'courseid': courseid })} style={{ backgroundColor: 'orange', marginBottom: 20, width: '90%', height: 30, borderRadius: 6, alignSelf: 'center', alignItems: 'center' }}>
-                            <Text style={{ color: 'white', fontWeight: 'bold', padding: 5 }}>Continue to Enroll</Text>
-                        </TouchableOpacity> :
-                        <TouchableOpacity onPress={() => alert(message)} style={{ backgroundColor: 'orange', marginBottom: 20, width: '90%', height: 30, borderRadius: 6, alignSelf: 'center', alignItems: 'center' }}>
-                            <Text style={{ color: 'white', fontWeight: 'bold', padding: 5 }}>Continue to Enroll</Text>
-                        </TouchableOpacity>}
-
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white', marginBottom:20 }}>Due Date:
+                        </Text>
+                        <Text style={{ color: 'white', marginTop: 21, }}> 1 Dec, 2023</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'white', marginBottom:20 }}>Progress:
+                        </Text>
+                        <Text style={{ color: 'white', marginTop: 21, marginBottom:30 }}> 80%</Text>
+                    </View>
 
 
 

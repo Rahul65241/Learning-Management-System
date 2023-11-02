@@ -8,6 +8,8 @@ import Signup from './Pages/Signup';
 import Dashboard from './Pages/Dashboard';
 import Course from './Pages/Course';
 import Booking from './Pages/Booking';
+import User from './Pages/User';
+import UserCourse from './Pages/UserCourse';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +31,16 @@ export default function App() {
           name="Login"
           component={Login}
           options={{ title: 'Login' }}
+        />
+        <Stack.Screen
+          name="User"
+          component={User}
+          options={{ title: 'User' }}
+        />
+        <Stack.Screen
+          name="UserCourse"
+          component={UserCourse}
+          options={{ title: 'UserCourse' }}
         />
         <Stack.Screen
           name="Booking"
