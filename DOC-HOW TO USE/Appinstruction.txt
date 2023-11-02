@@ -1,0 +1,30 @@
+Some instruction about development of APP
+
+
+--   Login Screen and and Sign Up Screen is Static. No Authentication code is there because it is not necessary.
+--   First page after login is User dashboard where enrolled courses is fetched from api and linked as API INTEGRATION Using AXIOS Method and firebase.
+     In the same Screen, A Button with title "VIEW ALL AVAILABLE COURSES" is there which brings to next screen.
+--   This Screen List all the Available Courses Which is being also fetched from Api using Axios Method and firebase.     
+
+--   On Clicking to any course (from enrolled courses or available courses), it will redirect to COUrse Detail Page which Contain all the course details
+     using api.there is button of title "CONTINUE TO ENROLL" for fake registration.
+
+     if Course is already enrolled or Enrollment status is closed then required alert will be showed.
+
+
+     NOTE:
+     - Images Used are Static One.
+     - React Native App (Expo) is Used for development.
+     - Firebase is used as API Tool for data storage or to show data.
+     - Axios is used for API Integration Process.
+     - Realtime database is for data management in Firebase.
+     - DATABASE URL GIVEN BY FIREBASE - https://lmsystem-5cdb1-default-rtdb.firebaseio.com/
+     - Exported Json file from realtime database in firebase used as API is attached in this folder.
+     - I have also shared some app screenshots and screen recording of app.
+
+
+
+
+---> This Project is Fully Developed by me alone.
+If any query, doubt and error. You can contact me.
+

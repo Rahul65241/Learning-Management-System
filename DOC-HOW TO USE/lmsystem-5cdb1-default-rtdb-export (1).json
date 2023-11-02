@@ -1,0 +1,162 @@
+[
+  {
+    "description": "Learn the basics of React Native development and build your first mobile app.",
+    "duration": "8 weeks",
+    "enrolled": false,
+    "enrollmentStatus": "Open",
+    "id": 0,
+    "instructor": "John Doe",
+    "location": "Online",
+    "name": "Introduction to React Native",
+    "prerequisites": [
+      "Basic JavaScript knowledge",
+      "Familiarity with React"
+    ],
+    "schedule": "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
+    "students": [
+      {
+        "email": "alice@example.com",
+        "id": 101,
+        "name": "Alice Johnson"
+      },
+      {
+        "email": "bob@example.com",
+        "id": 102,
+        "name": "Bob Smith"
+      }
+    ],
+    "syllabus": [
+      {
+        "content": "Overview of React Native, setting up your development environment.",
+        "topic": "Introduction to React Native",
+        "week": 1
+      },
+      {
+        "content": "Creating a simple mobile app using React Native components.",
+        "topic": "Building Your First App",
+        "week": 2
+      }
+    ],
+    "thumbnail": "your.image.here"
+  },
+  {
+    "description": "Learn the basics of React Native development and build your first mobile app.",
+    "duration": "8 weeks",
+    "enrolled": false,
+    "enrollmentStatus": "Open",
+    "id": 1,
+    "instructor": "John Doe",
+    "location": "Online",
+    "name": "Introduction to Python",
+    "prerequisites": [
+      "Basic JavaScript knowledge",
+      "Familiarity with React"
+    ],
+    "schedule": "Monday and Tuesday, 5:00 PM - 8:00 PM",
+    "students": [
+      {
+        "email": "alice@example.com",
+        "id": 101,
+        "name": "Alice Johnson"
+      },
+      {
+        "email": "bob@example.com",
+        "id": 102,
+        "name": "Bob Smith"
+      }
+    ],
+    "syllabus": [
+      {
+        "content": "Overview of React Native, setting up your development environment.",
+        "topic": "Introduction to React Native",
+        "week": 1
+      },
+      {
+        "content": "Creating a simple mobile app using React Native components.",
+        "topic": "Building Your First App",
+        "week": 2
+      }
+    ],
+    "thumbnail": "your.image.here"
+  },
+  {
+    "description": "Learn the basics of Python",
+    "duration": "8 weeks",
+    "enrolled": true,
+    "enrollmentStatus": "Close",
+    "id": 2,
+    "instructor": "Bob",
+    "location": "Online",
+    "name": "Introduction to Map",
+    "prerequisites": [
+      "Basic Theorem",
+      "Familiarity with React"
+    ],
+    "schedule": "Monday and Thursdays, 6:00 PM - 8:00 PM",
+    "students": [
+      {
+        "email": "alice@example.com",
+        "id": 1,
+        "name": "Vikash"
+      },
+      {
+        "email": "bob@example.com",
+        "id": 2,
+        "name": "Ravi"
+      }
+    ],
+    "syllabus": [
+      {
+        "content": "Overview of Math, setting up your development environment.",
+        "topic": "Introduction to Maths",
+        "week": 1
+      },
+      {
+        "content": "Creating a simple mobile data using Math components.",
+        "topic": "Building Your Data",
+        "week": 2
+      }
+    ],
+    "thumbnail": "your.image.here"
+  },
+  {
+    "description": "Learn the basics of Science and build your first mobile app.",
+    "duration": "8 weeks",
+    "enrolled": true,
+    "enrollmentStatus": "Close",
+    "id": 3,
+    "instructor": "Ravi",
+    "location": "Online",
+    "name": "Introduction to Science",
+    "prerequisites": [
+      "Basic Science knowledge",
+      "Familiarity with React"
+    ],
+    "schedule": "Sunday and Thursdays, 5:00 PM - 8:00 PM",
+    "students": [
+      {
+        "email": "main@example.com",
+        "id": 4,
+        "name": "Main"
+      },
+      {
+        "email": "jain@example.com",
+        "id": 102,
+        "name": "Jain Smith"
+      }
+    ],
+    "syllabus": [
+      {
+        "content": "Overview of Science, setting up your development environment.",
+        "topic": "Introduction to Science",
+        "week": 1
+      },
+      {
+        "content": "Creating a simple mobile app using React Native components.",
+        "topic": "Building Your First App",
+        "week": 2
+      }
+    ],
+    "thumbnail": "your.image.here"
+  }
+]
