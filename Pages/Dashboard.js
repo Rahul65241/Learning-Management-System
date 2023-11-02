@@ -56,18 +56,8 @@ export default function Dashboard({ navigation }) {
                 colors={['#2E2B69', 'orange', 'red', '#2A12CC']}
                 style={styles.linearGradient}>
                 <ScrollView>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <MaterialCommunityIcons name="menu" onPress={() => navigation.navigate('RegularAccount')} size={30} color="white" style={{ marginTop: width * 0.14, marginLeft: 10 }} />
-                        <MaterialCommunityIcons name="shopping-outline" onPress={() => navigation.navigate('Cart')} size={30} color="white" style={{ marginTop: width * 0.14, marginRight: 10 }} />
-                    </View>
-                    <Text style={styles.title}>WELCOME {username}!</Text>
-                    <View style={styles.inputView}>
-                        <TextInput
-                            style={styles.inputText}
-                            placeholder="Search"
-                            autoComplete='off'
-                            onChangeText={text => setName(text)} />
-                    </View>
+                   
+                    <Text style={[styles.title,{marginTop:80}]}>WELCOME Rahul!</Text>
                     <Text style={{ fontSize: 20, fontWeight: 'bold', marginLeft: 15, marginTop: 20, color: 'red' }}>
                         Enrolled Courses
                     </Text>
